@@ -163,3 +163,9 @@ body {
         grid-area: calculator;
     }
 }
+
+@media (prefers-reduced-motion: reduce) {
+    .site-footer a {
+        transition: none;
+    }
+}
