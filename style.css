@@ -165,7 +165,8 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .site-footer a {
-        transition: none;
+    * {
+        transition: none !important;
+        animation: none !important;
     }
 }
