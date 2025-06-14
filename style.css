@@ -28,7 +28,7 @@ body {
     background-color: var(--white);
     color: var(--grey-500);
     line-height: 1.6;
-    padding: 2rem 1rem;
+    padding: clamp(1.5rem, 2vw, 2rem) clamp(0.5rem, 2vw, 1rem);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -76,7 +76,7 @@ body {
 
 .card {
     background-color: var(--white);
-    padding: 2rem;
+    padding: clamp(1.5rem, 2vw, 2rem);
     border-radius: 0.5rem;
     box-shadow: var(--card-shadow);
     border-block-start: 0.266rem solid var(--cyan);
@@ -122,7 +122,8 @@ body {
 
 .site-footer {
     margin-block-start: 4rem;
-    padding: 2rem 1rem;
+    padding: clamp(1.5rem, 2vw, 2rem) clamp(0.5rem, 2vw, 1rem);
+
     text-align: center;
     font-size: var(--font-footer);
     color: var(--grey-400);
