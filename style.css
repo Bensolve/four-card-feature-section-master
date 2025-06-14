@@ -35,15 +35,15 @@ body {
     justify-content: center;
 }
 
+
+
 .section-header {
     text-align: center;
     max-inline-size: 36rem;
-    /* Logical property */
-    margin-block-end: 3rem;
+    margin-block-end: clamp(1rem, 3vw, 3rem);
     margin-inline: auto;
     padding-inline: 1rem;
 }
-
 .subheading {
     font-weight: 200;
     color: var(--grey-500);
@@ -64,14 +64,14 @@ body {
     font-size: var(--font-intro);
 }
 
+
 .cards-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 2rem;
-    margin-block: 2rem;
+    gap: clamp(1rem, 3vw, 2rem);
+    margin-block: clamp(1rem, 4vw, 2rem);
     margin-inline: auto;
     max-inline-size: 23.333rem;
-    /* 350px */
 }
 
 .card {
@@ -88,15 +88,17 @@ body {
     /* 250px */
 }
 
+
+
 .card img {
     inline-size: 4rem;
-    margin-block-start: 2rem;
+    margin-block-start: clamp(1rem, 3vw, 2rem);
     align-self: flex-end;
 }
 
 .card__title {
     font-weight: 600;
-    margin-block-end: 1rem;
+    margin-block-end: clamp(0.5rem , 1vw, 1rem);
     color: var(--grey-500);
 }
 
@@ -152,8 +154,10 @@ body {
 
     .card-supervisor {
         grid-area: supervisor;
-        margin-block-start: 2em;
+        margin-block-start: clamp(1rem, 3vw, 2em);
     }
+
+      
 
     .card-team-builder {
         grid-area: team-builder;
