@@ -120,12 +120,6 @@ body {
     color: var(--grey-500);
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.site-footer a:hover {
-    color: var(--red);
-    /* You can pick any of your primary colors here */
 }
 
 /* Desktop view */
@@ -164,8 +158,3 @@ body {
     }
 }
 
-@media (prefers-reduced-motion: reduce) {
-    .site-footer a {
-        transition: none;
-    }
-}
