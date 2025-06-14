@@ -7,6 +7,13 @@
     --grey-400: hsl(212, 6%, 44%);
     --white: hsl(0, 0%, 100%);
     --card-shadow: 0 0.666rem 1.333rem rgba(0, 0, 0, 0.1);
+
+    /* Font sizes */
+    --font-body: clamp(0.9375rem, 0.5vw + 0.5rem, 1.125rem);
+    --font-h2: clamp(1.125rem, 1vw + 0.5rem, 1.5rem);
+    --font-subheading: clamp(1.1rem, 1vw + 0.5rem, 1.5rem);
+    --font-intro: clamp(0.9rem, 0.5vw + 0.5rem, 1rem);
+    --font-footer: clamp(0.85rem, 0.5vw + 0.5rem, 1rem);
 }
 
 * {
@@ -17,8 +24,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
-    /* 15px */
+    font-size: var(--font-body);
     background-color: var(--white);
     color: var(--grey-500);
     line-height: 1.6;
@@ -31,68 +37,66 @@ body {
 
 .section-header {
     text-align: center;
-    max-width: 36rem;
-    /* 540px */
-    margin: 0 auto 3rem;
-    padding: 0 1rem;
+    max-inline-size: 36rem;
+    /* Logical property */
+    margin-block-end: 3rem;
+    margin-inline: auto;
+    padding-inline: 1rem;
 }
 
 .subheading {
     font-weight: 200;
     color: var(--grey-500);
     opacity: 0.7;
-    font-size: clamp(1.1rem, 1vw + 0.5rem, 1.5rem);
-    margin-bottom: 0.5rem;
+    font-size: var(--font-subheading);
+    margin-block-end: 0.5rem;
 }
 
 .section-header h2 {
     font-weight: 600;
-    font-size: 1.25rem;
-    margin-bottom: 1rem;
+    font-size: var(--font-h2);
+    margin-block-end: 1rem;
 }
 
 .intro {
     color: var(--grey-400);
     font-weight: 400;
-    font-size: clamp(0.9rem, 0.5vw + 0.5rem, 1rem);
+    font-size: var(--font-intro);
 }
 
 .cards-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
-    margin: 2rem auto;
-    max-width: 23.333rem;
+    margin-block: 2rem;
+    margin-inline: auto;
+    max-inline-size: 23.333rem;
     /* 350px */
 }
 
 .card {
     background-color: var(--white);
-    padding: 2rem 2rem;
+    padding: 2rem;
     border-radius: 0.5rem;
-
     box-shadow: var(--card-shadow);
-
-    border-top: 0.266rem solid var(--cyan);
-
+    border-block-start: 0.266rem solid var(--cyan);
     text-align: left;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 16.666rem;
-
+    min-block-size: 16.666rem;
+    /* 250px */
 }
 
 .card img {
-    width: 4rem;
-
-    margin-top: 2rem;
+    inline-size: 4rem;
+    margin-block-start: 2rem;
     align-self: flex-end;
 }
 
 .card__title {
     font-weight: 600;
-    margin-bottom: 1rem;
+    margin-block-end: 1rem;
     color: var(--grey-500);
 }
 
@@ -101,26 +105,26 @@ body {
 }
 
 .card-supervisor {
-    border-top-color: var(--cyan);
+    border-block-start-color: var(--cyan);
 }
 
 .card-team-builder {
-    border-top-color: var(--red);
+    border-block-start-color: var(--red);
 }
 
 .card-karma {
-    border-top-color: var(--orange);
+    border-block-start-color: var(--orange);
 }
 
 .card-calculator {
-    border-top-color: var(--blue);
+    border-block-start-color: var(--blue);
 }
 
 .site-footer {
-    margin-top: 4rem;
+    margin-block-start: 4rem;
     padding: 2rem 1rem;
     text-align: center;
-    font-size: clamp(0.85rem, 0.5vw + 0.5rem, 1rem);
+    font-size: var(--font-footer);
     color: var(--grey-400);
 }
 
@@ -133,10 +137,9 @@ body {
 /* Desktop view */
 @media (min-width: 48em) {
     .cards-grid {
-        max-width: 73.333rem;
+        max-inline-size: 73.333rem;
         /* 1100px */
-        margin: 0 auto;
-        display: grid;
+        margin-inline: auto;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: auto 0.5fr auto;
         gap: 2rem;
@@ -148,17 +151,17 @@ body {
 
     .card-supervisor {
         grid-area: supervisor;
-        margin-top: 2em;
+        margin-block-start: 2em;
     }
 
     .card-team-builder {
         grid-area: team-builder;
-        margin-bottom: -10em;
+        margin-block-end: -10em;
     }
 
     .card-karma {
         grid-area: karma;
-        margin-top: -10em;
+        margin-block-start: -10em;
     }
 
     .card-calculator {
