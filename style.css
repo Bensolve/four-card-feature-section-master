@@ -154,10 +154,10 @@ body {
 
     .card-supervisor {
         grid-area: supervisor;
-        margin-block-start: clamp(1rem, 3vw, 2em);
+        margin-block-start: 2em;
     }
 
-      
+        
 
     .card-team-builder {
         grid-area: team-builder;
